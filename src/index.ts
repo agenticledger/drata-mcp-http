@@ -462,9 +462,15 @@ app.post('/mcp', async (req, res) => {
     return;
   }
 
+  // Region resolution (per-request): X-Drata-Region header > DRATA_REGION env > 'us'
+  const headerRegion = (req.headers['x-drata-region'] as string | undefined)?.toLowerCase();
+  const region = (['us', 'eu', 'apac'].includes(headerRegion || '')
+    ? headerRegion
+    : (process.env.DRATA_REGION as string | undefined)) as 'us' | 'eu' | 'apac' | undefined;
+
   // Create per-session API client with the user's Drata key
   const client = new DrataClient(apiKey, {
-    region: (process.env.DRATA_REGION as 'us' | 'eu' | 'apac') || 'us',
+    region: region || 'us',
   });
 
   const transport = new StreamableHTTPServerTransport({
