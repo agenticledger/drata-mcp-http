@@ -87,7 +87,7 @@ export class DrataClient {
     if (args['sort'] !== undefined) params['sort'] = args['sort'];
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -110,7 +110,7 @@ export class DrataClient {
   async getCustomConnection(args: Record<string, any> = {}): Promise<any> {
     const path = `/custom-connections/${encodeURIComponent(String(args['connectionId']))}`;
     const params: Record<string, any> = {};
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -139,16 +139,16 @@ export class DrataClient {
     if (args['size'] !== undefined) params['size'] = args['size'];
     if (args['sort'] !== undefined) params['sort'] = args['sort'];
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
-    if (args['status[]'] !== undefined) params['status[]'] = args['status[]'];
-    if (args['userIds[]'] !== undefined) params['userIds[]'] = args['userIds[]'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['status'] !== undefined) params['status[]'] = args['status'];
+    if (args['userIds'] !== undefined) params['userIds[]'] = args['userIds'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
   async getAuditRequest(args: Record<string, any> = {}): Promise<any> {
     const path = `/workspaces/${encodeURIComponent(String(args['workspaceId']))}/audits/${encodeURIComponent(String(args['auditId']))}/requests/${encodeURIComponent(String(args['requestId']))}`;
     const params: Record<string, any> = {};
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -161,14 +161,14 @@ export class DrataClient {
     if (args['size'] !== undefined) params['size'] = args['size'];
     if (args['sort'] !== undefined) params['sort'] = args['sort'];
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
   async getAudit(args: Record<string, any> = {}): Promise<any> {
     const path = `/workspaces/${encodeURIComponent(String(args['workspaceId']))}/audits/${encodeURIComponent(String(args['auditId']))}`;
     const params: Record<string, any> = {};
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -182,7 +182,7 @@ export class DrataClient {
     if (args['sort'] !== undefined) params['sort'] = args['sort'];
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     if (args['assetClassType'] !== undefined) params['assetClassType'] = args['assetClassType'];
     if (args['assetType'] !== undefined) params['assetType'] = args['assetType'];
     if (args['assetProvider'] !== undefined) params['assetProvider'] = args['assetProvider'];
@@ -214,7 +214,7 @@ export class DrataClient {
   async getAsset(args: Record<string, any> = {}): Promise<any> {
     const path = `/assets/${encodeURIComponent(String(args['assetId']))}`;
     const params: Record<string, any> = {};
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -271,9 +271,9 @@ export class DrataClient {
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
     if (args['search'] !== undefined) params['search'] = args['search'];
-    if (args['codes[]'] !== undefined) params['codes[]'] = args['codes[]'];
-    if (args['ids[]'] !== undefined) params['ids[]'] = args['ids[]'];
-    if (args['excludeIds[]'] !== undefined) params['excludeIds[]'] = args['excludeIds[]'];
+    if (args['codes'] !== undefined) params['codes[]'] = args['codes'];
+    if (args['ids'] !== undefined) params['ids[]'] = args['ids'];
+    if (args['excludeIds'] !== undefined) params['excludeIds[]'] = args['excludeIds'];
     if (args['domain'] !== undefined) params['domain'] = args['domain'];
     if (args['category'] !== undefined) params['category'] = args['category'];
     if (args['frameworkTag'] !== undefined) params['frameworkTag'] = args['frameworkTag'];
@@ -287,7 +287,7 @@ export class DrataClient {
   async getControlLibraryItem(args: Record<string, any> = {}): Promise<any> {
     const path = `/control-library/${encodeURIComponent(String(args['templateId']))}`;
     const params: Record<string, any> = {};
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -313,7 +313,7 @@ export class DrataClient {
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
     if (args['excludeIds'] !== undefined) params['excludeIds'] = args['excludeIds'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -330,7 +330,7 @@ export class DrataClient {
   async getControlNote(args: Record<string, any> = {}): Promise<any> {
     const path = `/workspaces/${encodeURIComponent(String(args['workspaceId']))}/controls/${encodeURIComponent(String(args['controlId']))}/notes/${encodeURIComponent(String(args['noteId']))}`;
     const params: Record<string, any> = {};
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -360,7 +360,7 @@ export class DrataClient {
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
     if (args['frameworkSlug'] !== undefined) params['frameworkSlug'] = args['frameworkSlug'];
-    if (args['includeUserIds[]'] !== undefined) params['includeUserIds[]'] = args['includeUserIds[]'];
+    if (args['includeUserIds'] !== undefined) params['includeUserIds[]'] = args['includeUserIds'];
     if (args['excludeUserIds'] !== undefined) params['excludeUserIds'] = args['excludeUserIds'];
     return this.request<any>(path, { method: 'GET', params });
   }
@@ -400,7 +400,7 @@ export class DrataClient {
     if (args['sort'] !== undefined) params['sort'] = args['sort'];
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     if (args['isMonitored'] !== undefined) params['isMonitored'] = args['isMonitored'];
     if (args['isReady'] !== undefined) params['isReady'] = args['isReady'];
     if (args['hasEvidence'] !== undefined) params['hasEvidence'] = args['hasEvidence'];
@@ -443,7 +443,7 @@ export class DrataClient {
     if (args['size'] !== undefined) params['size'] = args['size'];
     if (args['sort'] !== undefined) params['sort'] = args['sort'];
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -505,7 +505,7 @@ export class DrataClient {
   async compareControlRequirements(args: Record<string, any> = {}): Promise<any> {
     const path = `/workspaces/${encodeURIComponent(String(args['workspaceId']))}/controls-requirement-comparison`;
     const params: Record<string, any> = {};
-    if (args['controlIds[]'] !== undefined) params['controlIds[]'] = args['controlIds[]'];
+    if (args['controlIds'] !== undefined) params['controlIds[]'] = args['controlIds'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -616,7 +616,7 @@ export class DrataClient {
     const path = `/devices/${encodeURIComponent(String(args['deviceId']))}/documents`;
     const params: Record<string, any> = {};
     if (args['type'] !== undefined) params['type'] = args['type'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -635,7 +635,7 @@ export class DrataClient {
   async getDeviceDocument(args: Record<string, any> = {}): Promise<any> {
     const path = `/devices/${encodeURIComponent(String(args['deviceId']))}/documents/${encodeURIComponent(String(args['documentId']))}`;
     const params: Record<string, any> = {};
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -655,7 +655,7 @@ export class DrataClient {
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
     if (args['externalId'] !== undefined) params['externalId'] = args['externalId'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     if (args['macAddress'] !== undefined) params['macAddress'] = args['macAddress'];
     if (args['serialNumber'] !== undefined) params['serialNumber'] = args['serialNumber'];
     if (args['sourceType'] !== undefined) params['sourceType'] = args['sourceType'];
@@ -672,7 +672,7 @@ export class DrataClient {
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
     if (args['externalId'] !== undefined) params['externalId'] = args['externalId'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     if (args['macAddress'] !== undefined) params['macAddress'] = args['macAddress'];
     if (args['serialNumber'] !== undefined) params['serialNumber'] = args['serialNumber'];
     if (args['sourceType'] !== undefined) params['sourceType'] = args['sourceType'];
@@ -682,7 +682,7 @@ export class DrataClient {
   async getDevice(args: Record<string, any> = {}): Promise<any> {
     const path = `/devices/${encodeURIComponent(String(args['deviceId']))}`;
     const params: Record<string, any> = {};
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -695,7 +695,7 @@ export class DrataClient {
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
     if (args['externalId'] !== undefined) params['externalId'] = args['externalId'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     if (args['macAddress'] !== undefined) params['macAddress'] = args['macAddress'];
     if (args['serialNumber'] !== undefined) params['serialNumber'] = args['serialNumber'];
     if (args['personnelId'] !== undefined) params['personnelId'] = args['personnelId'];
@@ -761,7 +761,7 @@ export class DrataClient {
     if (args['sort'] !== undefined) params['sort'] = args['sort'];
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     if (args['type'] !== undefined) params['type'] = args['type'];
     if (args['source'] !== undefined) params['source'] = args['source'];
     if (args['category'] !== undefined) params['category'] = args['category'];
@@ -780,7 +780,7 @@ export class DrataClient {
     if (args['size'] !== undefined) params['size'] = args['size'];
     if (args['sort'] !== undefined) params['sort'] = args['sort'];
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -804,9 +804,9 @@ export class DrataClient {
     if (args['sort'] !== undefined) params['sort'] = args['sort'];
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     if (args['name'] !== undefined) params['name'] = args['name'];
-    if (args['statuses[]'] !== undefined) params['statuses[]'] = args['statuses[]'];
+    if (args['statuses'] !== undefined) params['statuses[]'] = args['statuses'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -834,7 +834,7 @@ export class DrataClient {
   async getEvidenceLibrary(args: Record<string, any> = {}): Promise<any> {
     const path = `/workspaces/${encodeURIComponent(String(args['workspaceId']))}/evidence-library/${encodeURIComponent(String(args['evidenceLibraryId']))}`;
     const params: Record<string, any> = {};
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -867,7 +867,7 @@ export class DrataClient {
   async getEvidenceLibraryVersion(args: Record<string, any> = {}): Promise<any> {
     const path = `/workspaces/${encodeURIComponent(String(args['workspaceId']))}/evidence-library/${encodeURIComponent(String(args['evidenceLibraryId']))}/versions/${encodeURIComponent(String(args['versionId']))}`;
     const params: Record<string, any> = {};
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -908,7 +908,7 @@ export class DrataClient {
     if (args['sort'] !== undefined) params['sort'] = args['sort'];
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     if (args['isReady'] !== undefined) params['isReady'] = args['isReady'];
     if (args['isInScope'] !== undefined) params['isInScope'] = args['isInScope'];
     if (args['frameworkTag'] !== undefined) params['frameworkTag'] = args['frameworkTag'];
@@ -935,7 +935,7 @@ export class DrataClient {
     if (args['sort'] !== undefined) params['sort'] = args['sort'];
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     if (args['isReady'] !== undefined) params['isReady'] = args['isReady'];
     if (args['isInScope'] !== undefined) params['isInScope'] = args['isInScope'];
     if (args['excludeIds'] !== undefined) params['excludeIds'] = args['excludeIds'];
@@ -990,16 +990,16 @@ export class DrataClient {
     if (args['sort'] !== undefined) params['sort'] = args['sort'];
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
-    if (args['employmentStatus[]'] !== undefined) params['employmentStatus[]'] = args['employmentStatus[]'];
-    if (args['complianceStatus[]'] !== undefined) params['complianceStatus[]'] = args['complianceStatus[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
+    if (args['employmentStatus'] !== undefined) params['employmentStatus[]'] = args['employmentStatus'];
+    if (args['complianceStatus'] !== undefined) params['complianceStatus[]'] = args['complianceStatus'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
   async getPerson(args: Record<string, any> = {}): Promise<any> {
     const path = `/personnel/${encodeURIComponent(String(args['personnelId']))}`;
     const params: Record<string, any> = {};
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -1038,11 +1038,11 @@ export class DrataClient {
     if (args['sort'] !== undefined) params['sort'] = args['sort'];
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     if (args['name'] !== undefined) params['name'] = args['name'];
-    if (args['statuses[]'] !== undefined) params['statuses[]'] = args['statuses[]'];
+    if (args['statuses'] !== undefined) params['statuses[]'] = args['statuses'];
     if (args['reviewerUserId'] !== undefined) params['reviewerUserId'] = args['reviewerUserId'];
-    if (args['reviewerStatus[]'] !== undefined) params['reviewerStatus[]'] = args['reviewerStatus[]'];
+    if (args['reviewerStatus'] !== undefined) params['reviewerStatus[]'] = args['reviewerStatus'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -1070,7 +1070,7 @@ export class DrataClient {
   async getPolicy(args: Record<string, any> = {}): Promise<any> {
     const path = `/policies/${encodeURIComponent(String(args['policyId']))}`;
     const params: Record<string, any> = {};
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -1163,17 +1163,17 @@ export class DrataClient {
     if (args['sort'] !== undefined) params['sort'] = args['sort'];
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     if (args['version'] !== undefined) params['version'] = args['version'];
     if (args['current'] !== undefined) params['current'] = args['current'];
-    if (args['statuses[]'] !== undefined) params['statuses[]'] = args['statuses[]'];
+    if (args['statuses'] !== undefined) params['statuses[]'] = args['statuses'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
   async getPolicyVersion(args: Record<string, any> = {}): Promise<any> {
     const path = `/policies/${encodeURIComponent(String(args['policyId']))}/policy-versions/${encodeURIComponent(String(args['policyVersionId']))}`;
     const params: Record<string, any> = {};
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -1223,14 +1223,14 @@ export class DrataClient {
     if (args['riskId'] !== undefined) params['riskId'] = args['riskId'];
     if (args['title'] !== undefined) params['title'] = args['title'];
     if (args['description'] !== undefined) params['description'] = args['description'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
   async getRiskLibraryItem(args: Record<string, any> = {}): Promise<any> {
     const path = `/risk-registers/${encodeURIComponent(String(args['riskRegisterId']))}/risk-library/${encodeURIComponent(String(args['riskLibraryId']))}`;
     const params: Record<string, any> = {};
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -1257,7 +1257,7 @@ export class DrataClient {
     if (args['sort'] !== undefined) params['sort'] = args['sort'];
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -1274,7 +1274,7 @@ export class DrataClient {
   async getRiskNote(args: Record<string, any> = {}): Promise<any> {
     const path = `/risk-registers/${encodeURIComponent(String(args['riskRegisterId']))}/risks/${encodeURIComponent(String(args['riskId']))}/notes/${encodeURIComponent(String(args['noteId']))}`;
     const params: Record<string, any> = {};
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -1304,9 +1304,9 @@ export class DrataClient {
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
     if (args['name'] !== undefined) params['name'] = args['name'];
-    if (args['ownerIds[]'] !== undefined) params['ownerIds[]'] = args['ownerIds[]'];
-    if (args['workspaceIds[]'] !== undefined) params['workspaceIds[]'] = args['workspaceIds[]'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['ownerIds'] !== undefined) params['ownerIds[]'] = args['ownerIds'];
+    if (args['workspaceIds'] !== undefined) params['workspaceIds[]'] = args['workspaceIds'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -1356,7 +1356,7 @@ export class DrataClient {
     if (args['sort'] !== undefined) params['sort'] = args['sort'];
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     if (args['title'] !== undefined) params['title'] = args['title'];
     if (args['status'] !== undefined) params['status'] = args['status'];
     if (args['treatmentPlan'] !== undefined) params['treatmentPlan'] = args['treatmentPlan'];
@@ -1395,7 +1395,7 @@ export class DrataClient {
   async getRisk(args: Record<string, any> = {}): Promise<any> {
     const path = `/risk-registers/${encodeURIComponent(String(args['riskRegisterId']))}/risks/${encodeURIComponent(String(args['riskId']))}`;
     const params: Record<string, any> = {};
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -1428,8 +1428,8 @@ export class DrataClient {
   async getRiskInsights(args: Record<string, any> = {}): Promise<any> {
     const path = `/risk-registers/${encodeURIComponent(String(args['riskRegisterId']))}/insights`;
     const params: Record<string, any> = {};
-    if (args['ownerIds[]'] !== undefined) params['ownerIds[]'] = args['ownerIds[]'];
-    if (args['status[]'] !== undefined) params['status[]'] = args['status[]'];
+    if (args['ownerIds'] !== undefined) params['ownerIds[]'] = args['ownerIds'];
+    if (args['status'] !== undefined) params['status[]'] = args['status'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -1443,14 +1443,14 @@ export class DrataClient {
     if (args['sort'] !== undefined) params['sort'] = args['sort'];
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
   async getRole(args: Record<string, any> = {}): Promise<any> {
     const path = `/roles/${encodeURIComponent(String(args['roleId']))}`;
     const params: Record<string, any> = {};
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -1462,7 +1462,7 @@ export class DrataClient {
     if (args['sort'] !== undefined) params['sort'] = args['sort'];
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     if (args['firstName'] !== undefined) params['firstName'] = args['firstName'];
     if (args['lastName'] !== undefined) params['lastName'] = args['lastName'];
     return this.request<any>(path, { method: 'GET', params });
@@ -1476,7 +1476,7 @@ export class DrataClient {
     if (args['sort'] !== undefined) params['sort'] = args['sort'];
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     if (args['firstName'] !== undefined) params['firstName'] = args['firstName'];
     if (args['lastName'] !== undefined) params['lastName'] = args['lastName'];
     return this.request<any>(path, { method: 'GET', params });
@@ -1485,7 +1485,7 @@ export class DrataClient {
   async getUser(args: Record<string, any> = {}): Promise<any> {
     const path = `/users/${encodeURIComponent(String(args['userId']))}`;
     const params: Record<string, any> = {};
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -1499,7 +1499,7 @@ export class DrataClient {
     if (args['sort'] !== undefined) params['sort'] = args['sort'];
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     if (args['status'] !== undefined) params['status'] = args['status'];
     if (args['assigneeId'] !== undefined) params['assigneeId'] = args['assigneeId'];
     if (args['createdById'] !== undefined) params['createdById'] = args['createdById'];
@@ -1532,7 +1532,7 @@ export class DrataClient {
   async getTask(args: Record<string, any> = {}): Promise<any> {
     const path = `/workspaces/${encodeURIComponent(String(args['workspaceId']))}/tasks/${encodeURIComponent(String(args['taskId']))}`;
     const params: Record<string, any> = {};
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -1587,7 +1587,7 @@ export class DrataClient {
     if (args['sort'] !== undefined) params['sort'] = args['sort'];
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     if (args['name'] !== undefined) params['name'] = args['name'];
     if (args['type'] !== undefined) params['type'] = args['type'];
     return this.request<any>(path, { method: 'GET', params });
@@ -1609,7 +1609,7 @@ export class DrataClient {
   async getUserDocument(args: Record<string, any> = {}): Promise<any> {
     const path = `/users/${encodeURIComponent(String(args['userId']))}/documents/${encodeURIComponent(String(args['documentId']))}`;
     const params: Record<string, any> = {};
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -1628,7 +1628,7 @@ export class DrataClient {
     if (args['sort'] !== undefined) params['sort'] = args['sort'];
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -1653,7 +1653,7 @@ export class DrataClient {
     if (args['sort'] !== undefined) params['sort'] = args['sort'];
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     if (args['checkResultStatus'] !== undefined) params['checkResultStatus'] = args['checkResultStatus'];
     if (args['checkStatus'] !== undefined) params['checkStatus'] = args['checkStatus'];
     if (args['type'] !== undefined) params['type'] = args['type'];
@@ -1668,7 +1668,7 @@ export class DrataClient {
     if (args['size'] !== undefined) params['size'] = args['size'];
     if (args['sort'] !== undefined) params['sort'] = args['sort'];
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -1692,7 +1692,7 @@ export class DrataClient {
     if (args['sort'] !== undefined) params['sort'] = args['sort'];
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     if (args['targetId'] !== undefined) params['targetId'] = args['targetId'];
     return this.request<any>(path, { method: 'GET', params });
   }
@@ -1706,7 +1706,7 @@ export class DrataClient {
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
     if (args['includeExclusions'] !== undefined) params['includeExclusions'] = args['includeExclusions'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -1718,7 +1718,7 @@ export class DrataClient {
     if (args['sort'] !== undefined) params['sort'] = args['sort'];
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -1733,7 +1733,7 @@ export class DrataClient {
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
     if (args['type'] !== undefined) params['type'] = args['type'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -1764,10 +1764,10 @@ export class DrataClient {
     if (args['sort'] !== undefined) params['sort'] = args['sort'];
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
-    if (args['status[]'] !== undefined) params['status[]'] = args['status[]'];
-    if (args['type[]'] !== undefined) params['type[]'] = args['type[]'];
-    if (args['decision[]'] !== undefined) params['decision[]'] = args['decision[]'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['status'] !== undefined) params['status[]'] = args['status'];
+    if (args['type'] !== undefined) params['type[]'] = args['type'];
+    if (args['decision'] !== undefined) params['decision[]'] = args['decision'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -1808,7 +1808,7 @@ export class DrataClient {
   async getVendorSecurityReview(args: Record<string, any> = {}): Promise<any> {
     const path = `/vendors/${encodeURIComponent(String(args['vendorId']))}/security-reviews/${encodeURIComponent(String(args['securityReviewId']))}`;
     const params: Record<string, any> = {};
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -1918,7 +1918,7 @@ export class DrataClient {
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
     if (args['category'] !== undefined) params['category'] = args['category'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     if (args['impactLevel'] !== undefined) params['impactLevel'] = args['impactLevel'];
     if (args['renewalDate'] !== undefined) params['renewalDate'] = args['renewalDate'];
     if (args['renewalScheduleType'] !== undefined) params['renewalScheduleType'] = args['renewalScheduleType'];
@@ -1980,7 +1980,7 @@ export class DrataClient {
   async getVendorStats(args: Record<string, any> = {}): Promise<any> {
     const path = `/vendors-stats`;
     const params: Record<string, any> = {};
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     if (args['includeArchived'] !== undefined) params['includeArchived'] = args['includeArchived'];
     return this.request<any>(path, { method: 'GET', params });
   }
@@ -1988,7 +1988,7 @@ export class DrataClient {
   async getVendor(args: Record<string, any> = {}): Promise<any> {
     const path = `/vendors/${encodeURIComponent(String(args['vendorId']))}`;
     const params: Record<string, any> = {};
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
@@ -2086,7 +2086,7 @@ export class DrataClient {
     if (args['sort'] !== undefined) params['sort'] = args['sort'];
     if (args['sortDir'] !== undefined) params['sortDir'] = args['sortDir'];
     if (args['includeTotalCount'] !== undefined) params['includeTotalCount'] = args['includeTotalCount'];
-    if (args['expand[]'] !== undefined) params['expand[]'] = args['expand[]'];
+    if (args['expand'] !== undefined) params['expand[]'] = args['expand'];
     return this.request<any>(path, { method: 'GET', params });
   }
 
